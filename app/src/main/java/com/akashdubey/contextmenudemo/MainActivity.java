@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
 
             String defaultSmsPackageName = Telephony.Sms.getDefaultSmsPackage(this);
             Uri uri= Uri.parse("sms:"+phone[position]);
-                Intent intent=new Intent(Intent.ACTION_VIEW);
+                Intent intent=new Intent(Intent.ACTION_SENDTO);
                 intent.putExtra("sms_body","This is my sms message text");
                 intent.setData(uri);
 
